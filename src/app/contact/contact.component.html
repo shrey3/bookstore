@@ -1,0 +1,41 @@
+
+<body>
+    <!-- Contact Card -->
+    <div class="container w-50" style="margin-left: 4%" style="margin-top: 4%">
+      <div class="row">
+      <div class="col">
+      <div class="card" class ="p-2">
+       <div class ="card-body"  class = "border border-success shadow" >
+          <form class="form-contact"  #contactForm="ngForm">       
+            <h3 class ="font-family: Bedrock">Contact Us!</h3>
+            <input type="text" 
+                    class="form-control"  
+                    name="fname" 
+                    placeholder="Enter First Name" 
+                    required 
+                    autofocus=""
+                    minlength="2">
+            <input type="text" 
+                    class="form-control"  
+                    name="lname" 
+                    placeholder="Enter Last Name" 
+                    required 
+                    style = "margin-top: 2%"
+                    autofocus=""
+                    minlength="2">
+                    <div style = "margin-top: 2%"></div>
+            <textarea id="message"  class="form-control"  name="message" placeholder= "Write your message here" style="height:100px"></textarea>   
+            <br>
+
+            <button class="btn-lg btn-success btn-block" type="submit">Submit</button>  
+         </form>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+  </body>
+
+  
+  

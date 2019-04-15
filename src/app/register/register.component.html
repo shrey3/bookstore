@@ -28,7 +28,8 @@
                       name="username" 
                       style = "margin-top: 2%"
                       placeholder="Enter Username"  
-                      formControlName="username"/>             
+                      formControlName="username"
+                      required/>            
                 <div *ngIf="userSignUpForm.controls.username?.touched || userSignUpForm.controls.username?.dirty">
                     <div *ngIf="userSignUpForm.controls.username.errors?.required">
                             <small id="HelpBlock" class="text-muted">
@@ -55,24 +56,23 @@
                                     </small>                
                             </div>
                      </div>
+                     {{userSignUpForm.controls.username?.errors | json}}
+                     username = {{userSignUpForm.controls.username?.value | json}}
+                     <br>
+                     {{userSignUpForm.controls.password.errors | json}}
+                     password = {{userSignUpForm.controls.password.value | json}}
 
               <br>
               <button class="btn-lg btn-success btn-block" type="submit">Sign Up</button>
             </form>
 
-              <div *ngIf="alert()"> 
+              <!-- <div *ngIf="alert()"> 
                 <div class="alert alert-success" role="alert">
                      You successfully Signed Up!
                 </div>
-             </div>
+             </div> -->
       </div>
     </div>
    </div>
   </div>
 
-
-              <!-- {{userSignUpForm.controls.username?.errors | json}}
-              username = {{userSignUpForm.controls.username?.value | json}}
-              <br>
-              {{userSignUpForm.controls.password.errors | json}}
-              password = {{userSignUpForm.controls.password.value | json}} -->

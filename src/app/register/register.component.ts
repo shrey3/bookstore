@@ -31,23 +31,23 @@ export class RegisterComponent implements OnInit {
 
   addingUser(user) {
 
-   // console.log(this.userSignUpForm)
+    console.log(this.userSignUpForm)
     this.newUser.id = user.id + 1;
     this.newUser.username = user.username;
     this.newUser.password = user.password;
 
-    // this.userService.addNewUser(this.newUser).subscribe(
-    //   (addedUser: User) => {
-    //     this.myUsers.push(addedUser);
-    //     this.userAddError = false;
-    //     console.log(this.newUser);
-    //   },
-    //   error => {
-    //     console.log("Error");
-    //     this.userAddError = true;
-    //   }
-    // );
-  
+    this.userService.addNewUser(this.newUser).subscribe(
+      (addedUser: User) => {
+        this.myUsers.push(addedUser);
+        this.userAddError = false;
+        console.log(this.newUser);
+      },
+      error => {
+        console.log("Error");
+        this.userAddError = true;
+      }
+    );
+
   }
 
   userSignUpForm = new FormGroup({

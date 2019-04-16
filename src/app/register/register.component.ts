@@ -13,11 +13,11 @@ export class RegisterComponent implements OnInit {
  
   userAddError: boolean = false;
   myUsers: User[] = [];
-  newUser: User = new User(0, null, null);
+  newUser: User = new User(null, null, null);
   alertValue: boolean;
 
   user: User = {
-    id: 0,
+    id: null,
     username: null,
     password: null
   };

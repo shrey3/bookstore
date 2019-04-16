@@ -16,9 +16,9 @@ export class LoginComponent {
   showAddCard: boolean = false;
   showACard: boolean = false;
   userAddError: boolean = false;
-  newUser: User = new User(0, null, null);
+  newUser: User = new User(null, null, null);
   user: User = {
-    id: 0,
+    id: null,
     username: null,
     password: null
   };

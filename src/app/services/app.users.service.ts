@@ -19,13 +19,14 @@ export class UserService{
     }
 
     addNewUser(user : User): Observable<User> {
-        return this.http.post<User>(db_URL + "/user/allusers", user);
+        user.id = user.username + 'id';
+        return this.http.post<User>(db_URL + "/user/adduser", user);
     }
 
     validateUserForlogin(user: User): Observable<User[]> {
-        let parameter = "username=" + user.username + "&password=" + user.password
+        // let parameter = "username=" + user.username + "&password=" + user.password
         let returnedUser: User[] = [];
-        return this.http.get<User[]>(db_URL + "/user/allusers?" + parameter);
+        return this.http.get<User[]>(db_URL + "/user/allusers?");
     }
 
 }

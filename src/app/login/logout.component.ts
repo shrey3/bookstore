@@ -8,13 +8,13 @@ import { Router } from "@angular/router";
 })
 
 export class LogoutComponent implements OnInit {
-  
-    constructor(private routerService : Router) {
+
+    constructor(private routerService: Router) {
 
     }
     ngOnInit() {
-        sessionStorage.setItem("username",null);
-        sessionStorage.setItem("loggedIn","false");
+        sessionStorage.setItem("username", null);
+        sessionStorage.setItem("loggedIn", "false");
         this.routerService.navigate([""]);
     }
 

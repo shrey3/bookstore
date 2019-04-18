@@ -10,7 +10,7 @@ import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
- 
+
   userAddError: boolean = false;
   myUsers: User[] = [];
   newUser: User = new User(null, null, null);
@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
     password: null
   };
 
-  constructor(private userService: UserService) { 
+  constructor(private userService: UserService) {
 
   }
 
@@ -51,12 +51,12 @@ export class RegisterComponent implements OnInit {
   }
 
   userSignUpForm = new FormGroup({
-    
+
     'username': new FormControl(null, [Validators.required, Validators.minLength(5)]),
-    password: new FormControl(null, 
-        [Validators.required, 
-        Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
-    
-});
+    password: new FormControl(null,
+      [Validators.required,
+      Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
+
+  });
 
 }

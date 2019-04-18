@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bookStore';
-  
+
   checkIfLoggedIn() {
     let loggedInValidation = sessionStorage.getItem("loggedIn");
     //console.log(loggedInValidation("loggedIn"))
-     if(loggedInValidation === "true") {
-       return true;
-     } else {
-       return false;
-     }
+    if (loggedInValidation === "true") {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 

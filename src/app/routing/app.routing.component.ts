@@ -1,20 +1,21 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector:'app-navigation',
-    templateUrl:'app.navigation.html',
-    styleUrls:['app.navigation.scss']
+  selector: 'app-navigation',
+  templateUrl: 'app.navigation.html',
+  styleUrls: ['app.navigation.scss']
 })
 
 export class NavigationComponent {
-  
-    getWhoLoggedIn() {
-       
-        let whoLoggedIn = sessionStorage.getItem("username");
-        if(whoLoggedIn != null) {
-         return whoLoggedIn
-       } else {
-         return null;
-       }
-     }
+
+  getWhoLoggedIn() {
+
+    console.log(sessionStorage)
+    let whoLoggedIn = sessionStorage.getItem("username");
+    if (whoLoggedIn != null) {
+      return whoLoggedIn
+    } else {
+      return null;
+    }
+  }
 }

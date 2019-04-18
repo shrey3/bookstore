@@ -9,8 +9,8 @@ import { CustomDirectivesModule } from '../Directives/app.directives.module';
     CommonModule,
     CustomDirectivesModule
   ],
-  providers:[UserService]
+  providers: [UserService]
 })
-export class LoginModule { 
+export class LoginModule {
 
 }

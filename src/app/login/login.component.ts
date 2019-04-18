@@ -23,28 +23,31 @@ export class LoginComponent {
     password: null
   };
 
-  constructor(private userService: UserService, private routerService: Router) {}
+  constructor(private userService: UserService, private routerService: Router) { }
 
-  enableOrDisableCardshowAddCard(){
+  enableOrDisableCardshowAddCard() {
     console.log("button works")
     this.showAddCard = !this.showAddCard;
   }
 
   loginUser() {
-       this.userService.validateUserForlogin(this.user).subscribe((users: User[]) => {
-            console.log(users);
-            if(users != null && users.length > 0) {
-                sessionStorage.setItem("loggedIn", "true");
-                sessionStorage.setItem("username",users[0].username);
-              // localStorage.setItem("localTest","Testing the local storage");
-                this.routerService.navigate(["/home"]);
-                
-            } else {
-                this.loginMessage = "Login Failed";
-                this.loginSucess = false;
-            }
-       })
-    }
+    this.userService.validateUserForlogin(this.user).subscribe((users: User) => {
+      console.log(users);
 
-  
+      if (users != null) {
+        sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("username", users["username"]);
+        console.log(sessionStorage)
+        //localStorage.setItem("localTest","Testing the local storage");
+        this.routerService.navigate(["/home"]);
+
+      } else {
+
+        this.loginMessage = "Login Failed";
+        this.loginSucess = false;
+      }
+    })
+  }
+
+
 }

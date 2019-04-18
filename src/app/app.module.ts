@@ -33,9 +33,9 @@ import { LogoutComponent } from './login/logout.component';
     CustomDirectivesModule,
     AppRoutingModule,
     RegisterModule,
-    ReactiveFormsModule,    
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

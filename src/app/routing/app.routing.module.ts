@@ -11,14 +11,14 @@ import { HomePageComponent } from '../home-page/home-page.component';
 import { LoginGuard } from './app.login.guard.service';
 import { LogoutComponent } from '../login/logout.component';
 
-const appRoutes : Routes = [
-    {path:'', component: LoginComponent},
-    {path:'login', component: LoginComponent},
-    {path:'register', component: RegisterComponent},
-    {path:'contact', component: ContactComponent},
-    {path: 'home', component: HomePageComponent, canActivate: [LoginGuard]},
-    {path:'logout', component: LogoutComponent , canActivate: [LoginGuard]},
-   // {path:'**', component: PageNotFound , canActivate: [LoginGuard]}
+const appRoutes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'home', component: HomePageComponent, canActivate: [LoginGuard] },
+  { path: 'logout', component: LogoutComponent, canActivate: [LoginGuard] },
+  // {path:'**', component: PageNotFound , canActivate: [LoginGuard]}
 
 ]
 
@@ -33,7 +33,7 @@ const appRoutes : Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [LoginGuard],
-  exports:[NavigationComponent]
+  exports: [NavigationComponent]
 })
 
 

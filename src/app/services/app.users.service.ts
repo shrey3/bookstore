@@ -25,7 +25,6 @@ export class UserService {
 
     validateUserForlogin(user: User): Observable<User> {
         let parameter = user.username
-        let returnedUser: User[] = [];
         console.log(url + parameter);
         return this.http.get<User>(url + parameter);
     }

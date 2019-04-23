@@ -10,7 +10,7 @@ export class NavigationComponent {
 
   getWhoLoggedIn() {
 
-    console.log(sessionStorage)
+   // console.log(sessionStorage)
     let whoLoggedIn = sessionStorage.getItem("username");
     if (whoLoggedIn != null) {
       return whoLoggedIn

@@ -32,9 +32,8 @@ export class LoginComponent {
 
   loginUser() {
     this.userService.validateUserForlogin(this.user).subscribe((users: User) => {
-      console.log(users);
-
-      if (users != null) {
+    
+      if (this.user.username === users.username && this.user.password === users.password) {
         sessionStorage.setItem("loggedIn", "true");
         sessionStorage.setItem("username", users["username"]);
         console.log(sessionStorage)

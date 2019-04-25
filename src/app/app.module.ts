@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterModule } from './register/register.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LogoutComponent } from './login/logout.component';
+import { PageNotFound } from './error/error.component';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { LogoutComponent } from './login/logout.component';
     ContactComponent,
     RegisterComponent,
     HomePageComponent,
-    LogoutComponent
+    LogoutComponent,
+    PageNotFound,
+    
   ],
   imports: [
     BrowserModule,

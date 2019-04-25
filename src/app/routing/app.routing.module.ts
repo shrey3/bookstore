@@ -10,6 +10,7 @@ import { RegisterComponent } from '../register/register.component';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { LoginGuard } from './app.login.guard.service';
 import { LogoutComponent } from '../login/logout.component';
+import { PageNotFound } from '../error/error.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -18,8 +19,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'home', component: HomePageComponent, canActivate: [LoginGuard] },
   { path: 'logout', component: LogoutComponent, canActivate: [LoginGuard] },
-  // {path:'**', component: PageNotFound , canActivate: [LoginGuard]}
-
+  {path:'**', component: PageNotFound }
 ]
 
 @NgModule({
